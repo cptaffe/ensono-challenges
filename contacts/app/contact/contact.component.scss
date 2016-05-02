@@ -1,8 +1,24 @@
+@import 'base';
+
 :host {
-  flex: 1 1 auto;
 
   md-card {
     margin: 0 16px 16px 0;
-    width: 350px;
+    width: 300px;
+    .edit {
+      background-color: $accent;
+      color: white;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    a {
+      color: $accent;
+      margin-right: 5px;
+      margin-left: 5px;
+      display: inline-block;
+    }
   }
 }

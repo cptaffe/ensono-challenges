@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<md-card>
+  <img md-card-image src="{{ contact.avatar }}" alt="avatar">
+  <md-card-title>
+    <i class="material-icons">person</i> {{ contact.name }}
+  </md-card-title>
+  <md-card-content>
+    <md-list dense>
+      <md-list-item>
+        <i class="material-icons">email</i>
+        <a href="mailto:{{contact.email}}">
+          {{ contact.email }}
+        </a>
+      </md-list-item>
+      <md-list-item>
+        <i class="material-icons">phone</i> {{contact.phone}}
+      </md-list-item>
+      <md-list-item>
+        <i class="material-icons">cake</i> {{ contact.birthday }}
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+  <md-card-actions>
+    <button md-fab onClick="onEdit()" class="edit"><i class="material-icons md-24">edit</i></button>
+  </md-card-actions>
+</md-card>

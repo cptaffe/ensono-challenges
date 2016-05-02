@@ -1,15 +1,17 @@
-@import url('//fonts.googleapis.com/css?family=Roboto');
+@import 'base';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 :host {
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Roboto, sans-serif;
   padding: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   h1 {
+    color: $accent;
+    font-weight: 400;
+    font-size: 5vh;
     width: 100%;
     text-align: center;
+  }
+  a {
+    text-decoration: none;
   }
 }

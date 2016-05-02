@@ -14,10 +14,14 @@ export class Contact {
 
 @Component({
     selector: 'contact',
-    templateUrl: 'app/contact/contact.component.html',
+    templateUrl: 'app/contact/contact.component.xhtml',
     styleUrls: ['app/contact/contact.component.css'],
     directives: [MD_CARD_DIRECTIVES, MD_LIST_DIRECTIVES, MdButton]
 })
 export class ContactComponent {
   @Input() contact: Contact
+
+  onEdit() {
+    // TODO: edit
+  }
 }

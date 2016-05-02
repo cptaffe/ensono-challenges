@@ -5,7 +5,7 @@ import {Contact, ContactComponent} from '../contact/contact.component';
 
 @Component({
     selector: 'contact-list',
-    templateUrl: 'app/contact-list/contact-list.component.html',
+    templateUrl: 'app/contact-list/contact-list.component.xhtml',
     styleUrls: ['app/contact-list/contact-list.component.css'],
     viewProviders: [HTTP_PROVIDERS],
     directives: [ContactComponent]
