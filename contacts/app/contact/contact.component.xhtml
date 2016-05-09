@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<md-card>
+<md-card (mouseenter)="revealTools()" (mouseleave)="hideTools()">
   <img md-card-image src="{{ contact.avatar }}" alt="avatar">
   <md-card-title>
-    <i class="material-icons">person</i> {{ contact.name }}
+    {{ contact.name }}
   </md-card-title>
   <md-card-content>
     <md-list dense>
       <md-list-item>
-        <i class="material-icons">email</i>
+        <button md-icon-button>
+          <md-icon class="material-icons">email</md-icon>
+        </button>
         <a href="mailto:{{contact.email}}">
           {{ contact.email }}
         </a>
       </md-list-item>
       <md-list-item>
-        <i class="material-icons">phone</i> {{contact.phone}}
+        <button md-icon-button>
+          <md-icon class="material-icons">phone</md-icon>
+        </button>
+        {{contact.phone}}
       </md-list-item>
       <md-list-item>
-        <i class="material-icons">cake</i> {{ contact.birthday }}
+        <button md-icon-button>
+          <md-icon class="material-icons">cake</md-icon>
+        </button>
+        {{ contact.birthday }}
       </md-list-item>
     </md-list>
   </md-card-content>
-  <md-card-actions>
-    <button md-fab onClick="onEdit()" class="edit"><i class="material-icons md-24">edit</i></button>
+  <md-card-actions style='opacity: {{ toolsHidden ? "0" : "1" }}'>
+    <button md-icon-button (onClick)="onEdit()">
+      <md-icon class="material-icons md-24">edit</md-icon>
+    </button>
   </md-card-actions>
 </md-card>

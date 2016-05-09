@@ -4,7 +4,7 @@
   "description": "Contacts: Challege from Jeremy to create a contacts app",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" \"scss --watch app:app\"",
+    "start": "tsc && tsc -p lite-server && concurrently \"npm run tsc:w\" \"npm run lite\" \"scss --watch app:app\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
@@ -18,14 +18,17 @@
     "@angular2-material/list": "^2.0.0-alpha.3",
     "angular2": "^2.0.0-beta.15",
     "es6-shim": "^0.35.0",
-    "reflect-metadata": "^0.1.3",
-    "rxjs": "^5.0.0-beta.6",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
     "systemjs": "^0.19.26",
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "connect-history-api-fallback": "^1.2.0",
     "lite-server": "^2.2.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "^5.0.0-beta.6",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   },

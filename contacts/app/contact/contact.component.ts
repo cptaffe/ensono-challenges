@@ -20,6 +20,17 @@ export class Contact {
 })
 export class ContactComponent {
   @Input() contact: Contact
+  toolsHidden : boolean = true
+
+  revealTools() {
+    // fade-in
+    this.toolsHidden = false
+  }
+
+  hideTools() {
+    // fade-out
+    this.toolsHidden = true
+  }
 
   onEdit() {
     // TODO: edit
